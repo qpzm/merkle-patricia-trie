@@ -5,6 +5,8 @@ class MerkleTree {
     this.tree = [];
   }
 
+  // Array of Array implementation
+  // [[hash root], [children], [grand-children], ... [Transactions]]
   createTree(transactionList) {
     this.tree.unshift(transactionList);
     this.tree.unshift(transactionList.map(t => t.hash));
